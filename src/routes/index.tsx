@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { createBrowserRouter } from "react-router";
 
+import SplashScreen from "@/components/splash-screen";
 import { Layout } from "@/layouts";
 
 // -------------------------------------------------
@@ -12,7 +13,7 @@ export const routes = createBrowserRouter([
 	{
 		path: "/",
 		element: (
-			<Suspense fallback={<p>Loading...</p>}>
+			<Suspense fallback={<SplashScreen />}>
 				<Layout />
 			</Suspense>
 		),

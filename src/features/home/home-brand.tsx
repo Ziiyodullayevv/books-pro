@@ -1,3 +1,7 @@
 export function HomeBrand() {
-	return <h2 className="text-white font-bold text-2xl">Flex.id</h2>;
+	return (
+		<div className="flex items-center rounded-full">
+			<h2 className="text-white font-bold text-2xl text-shadow-lg">Movie Go</h2>
+		</div>
+	);
 }

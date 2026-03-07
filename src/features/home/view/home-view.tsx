@@ -1,7 +1,7 @@
 import { HomeCards } from "../home-cards";
 import { HomeCategories } from "../home-categories";
 import { HomeTopBarView } from "../home-top-bar";
-import { HomeTrendingSlider } from "../home-trending-slider";
+import { HomeTrendingGrid } from "../home-trending-grid";
 
 export function HomeView() {
 	return (
@@ -12,7 +12,7 @@ export function HomeView() {
 
 			<HomeCategories />
 
-			<HomeTrendingSlider />
+			<HomeTrendingGrid />
 		</>
 	);
 }

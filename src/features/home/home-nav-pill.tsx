@@ -3,7 +3,7 @@ import { Link } from "react-router";
 
 export function HomeNavPill() {
 	return (
-		<div className="bg-black text-white items-center h-12 flex p-1 rounded-[40px]">
+		<div className="bg-black text-white shadow-lg items-center h-12 flex p-1 rounded-[40px]">
 			<nav className="flex gap-10 text-sm px-5">
 				<Link to={"#"}>Movies</Link>
 				<Link className="opacity-50" to={"#"}>
