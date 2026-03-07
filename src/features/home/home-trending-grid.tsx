@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { Funnel, SlidersHorizontal, Star } from "lucide-react";
+import { Link } from "react-router";
 
 import { Skeleton } from "@/components/ui/skeleton";
 
@@ -100,7 +101,7 @@ export function HomeTrendingGrid() {
 			<div>
 				<div className="grid grid-cols-6 gap-4">
 					{data.map((movie: MovieProps) => (
-						<article key={movie.id} className="space-y-2.5">
+						<Link to={`/${movie.id}`} key={movie.id} className="space-y-2.5">
 							<div className="aspect-3/4 overflow-hidden rounded-[24px] bg-white/8 shadow-[0_24px_40px_-18px_rgba(8,16,32,0.75)]">
 								<img
 									src={movie.img_url}
@@ -125,7 +126,7 @@ export function HomeTrendingGrid() {
 									<span>{movie.year}</span>
 								</div>
 							</div>
-						</article>
+						</Link>
 					))}
 				</div>
 			</div>
