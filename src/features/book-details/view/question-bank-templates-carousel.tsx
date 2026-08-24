@@ -36,7 +36,7 @@ export function QuestionBankTemplatesCarousel({
 	};
 
 	return (
-		<section className="mt-14">
+		<section className="mt-8 sm:mt-14">
 			<div className="mb-5 flex items-center justify-between gap-4">
 				<div>
 					<h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">{title}</h2>
@@ -61,7 +61,7 @@ export function QuestionBankTemplatesCarousel({
 					className="question-bank-templates__swiper overflow-visible"
 				>
 					{cardsToRender.map((card) => (
-						<SwiperSlide key={card.id} className="!w-[250px] sm:!w-[272px] xl:!w-[286px]">
+						<SwiperSlide key={card.id} className="!w-[82vw] max-w-[250px] sm:!w-[272px] sm:max-w-none xl:!w-[286px]">
 							<QuestionBankTemplateCard card={card} />
 						</SwiperSlide>
 					))}
@@ -71,7 +71,7 @@ export function QuestionBankTemplatesCarousel({
 					type="button"
 					onClick={() => swiperRef.current?.slidePrev()}
 					className={cn(
-						"absolute left-2 top-1/2 z-10 flex size-10 -translate-y-1/2 items-center justify-center rounded-xl border border-white/20 bg-[#BCAEA6]/60 text-white backdrop-blur-xl transition-all hover:bg-[#C8BBB3]/75",
+						"absolute left-2 top-1/2 z-10 hidden size-10 -translate-y-1/2 items-center justify-center rounded-xl border border-white/20 bg-[#BCAEA6]/60 text-white backdrop-blur-xl transition-all hover:bg-[#C8BBB3]/75 sm:flex",
 						!canGoPrev && "pointer-events-none opacity-0",
 					)}
 					aria-label="Previous template"
@@ -83,7 +83,7 @@ export function QuestionBankTemplatesCarousel({
 					type="button"
 					onClick={() => swiperRef.current?.slideNext()}
 					className={cn(
-						"absolute right-2 top-1/2 z-10 flex size-10 -translate-y-1/2 items-center justify-center rounded-xl border border-white/20 bg-[#8F776C]/70 text-white backdrop-blur-xl transition-all hover:bg-[#9D877D]/80",
+						"absolute right-2 top-1/2 z-10 hidden size-10 -translate-y-1/2 items-center justify-center rounded-xl border border-white/20 bg-[#8F776C]/70 text-white backdrop-blur-xl transition-all hover:bg-[#9D877D]/80 sm:flex",
 						!canGoNext && "pointer-events-none opacity-0",
 					)}
 					aria-label="Next template"

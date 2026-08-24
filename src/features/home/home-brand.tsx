@@ -21,7 +21,7 @@ export function HomeBrand() {
 			<button
 				type="button"
 				onClick={handleGoBack}
-				className="inline-flex h-12 items-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 text-white shadow-[0_20px_40px_-28px_rgba(0,0,0,0.7)] backdrop-blur-xl transition hover:bg-white/20"
+				className="inline-flex h-10 w-fit items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 text-white shadow-[0_20px_40px_-28px_rgba(0,0,0,0.7)] backdrop-blur-xl transition hover:bg-white/20 sm:h-12 sm:px-5"
 				aria-label="Go back"
 			>
 				<ArrowLeft className="size-4" />
@@ -32,7 +32,7 @@ export function HomeBrand() {
 
 	return (
 		<div className="flex items-center rounded-full">
-			<h2 className="text-2xl font-bold text-white text-shadow-lg">Movie Go</h2>
+			<h2 className="whitespace-nowrap text-xl font-bold text-white text-shadow-lg sm:text-2xl">Movie Go</h2>
 		</div>
 	);
 }

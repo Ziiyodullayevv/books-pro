@@ -23,9 +23,9 @@ export function HomeTopBarView() {
 	}, []);
 
 	return (
-		<div
+		<header
 			className={cn(
-				"sticky top-0 z-100 flex items-center justify-between px-10 py-4 transition-colors duration-200",
+				"sticky top-0 z-100 grid grid-cols-[1fr_auto] items-center gap-3 px-4 py-3 transition-colors duration-200 sm:px-6 lg:grid-cols-[1fr_auto_1fr] lg:px-10 lg:py-4",
 				isScrolled && "bg-[#070C16]/70 backdrop-blur-lg shadow-lg",
 			)}
 		>
@@ -34,6 +34,6 @@ export function HomeTopBarView() {
 			<HomeNavPill />
 
 			<HomeUserMenu />
-		</div>
+		</header>
 	);
 }

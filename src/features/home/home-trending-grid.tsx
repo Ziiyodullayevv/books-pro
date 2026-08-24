@@ -10,7 +10,7 @@ const TRENDING_GRID_SKELETON_ITEMS = 6;
 
 function HomeTrendingGridSkeleton() {
 	return (
-		<section className="px-10">
+		<section className="px-4 sm:px-6 lg:px-10">
 			<header className="mb-5 flex items-center justify-between gap-4">
 				<Skeleton className="h-9 w-64 bg-white/15" />
 
@@ -21,7 +21,7 @@ function HomeTrendingGridSkeleton() {
 				</div>
 			</header>
 
-			<div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+			<div className="grid grid-cols-2 gap-x-3 gap-y-6 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4 xl:grid-cols-6">
 				{Array.from({ length: TRENDING_GRID_SKELETON_ITEMS }).map((_, idx) => (
 					<article key={idx} className="space-y-2.5">
 						<Skeleton className="aspect-[3/4] rounded-[24px] bg-white/10 shadow-[0_24px_40px_-18px_rgba(8,16,32,0.75)]" />
@@ -47,7 +47,7 @@ export function HomeTrendingGrid() {
 
 	if (!hasTmdbCredentials) {
 		return (
-			<section className="px-10">
+			<section className="px-4 sm:px-6 lg:px-10">
 				<div className="rounded-3xl border border-red-400/20 bg-red-500/10 p-4 text-sm text-red-200">
 					<code>VITE_TMDB_API_KEY</code> yoki <code>VITE_TMDB_READ_ACCESS_TOKEN</code>{" "}
 					topilmadi. <code>.env</code> faylga TMDb credentials qo‘shing.
@@ -62,7 +62,7 @@ export function HomeTrendingGrid() {
 
 	if (error) {
 		return (
-			<section className="px-10">
+			<section className="px-4 sm:px-6 lg:px-10">
 				<div className="rounded-3xl border border-red-400/20 bg-red-500/10 p-4 text-sm text-red-200">
 					Error: {error.message}
 				</div>
@@ -71,9 +71,9 @@ export function HomeTrendingGrid() {
 	}
 
 	return (
-		<section className="px-10">
-			<header className="mb-5 flex items-center justify-between gap-4">
-				<h2 className="text-2xl font-normal tracking-tight text-white md:text-3xl">
+		<section className="px-4 sm:px-6 lg:px-10">
+			<header className="mb-5 flex items-center justify-between gap-3">
+				<h2 className="text-xl font-normal tracking-tight text-white sm:text-2xl md:text-3xl">
 					Trending Movies This Week
 				</h2>
 
@@ -96,10 +96,10 @@ export function HomeTrendingGrid() {
 				</div>
 			</header>
 
-			<div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+			<div className="grid grid-cols-2 gap-x-3 gap-y-6 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4 xl:grid-cols-6">
 				{data.map((movie) => (
 					<Link to={`/${movie.id}`} key={movie.id} className="space-y-2.5">
-						<div className="aspect-[3/4] overflow-hidden rounded-[24px] bg-white/8 shadow-[0_24px_40px_-18px_rgba(8,16,32,0.75)]">
+						<div className="aspect-[3/4] overflow-hidden rounded-[18px] bg-white/8 shadow-[0_24px_40px_-18px_rgba(8,16,32,0.75)] sm:rounded-[24px]">
 							<img
 								src={movie.imgUrl}
 								alt={movie.title}

@@ -6,6 +6,18 @@
 
 html {
 	height: 100%;
+	background: #071426;
+}
+
+body {
+	min-width: 320px;
+	min-height: 100%;
+	overflow-x: hidden;
+}
+
+button,
+a {
+	-webkit-tap-highlight-color: transparent;
 }
 
 @theme inline {

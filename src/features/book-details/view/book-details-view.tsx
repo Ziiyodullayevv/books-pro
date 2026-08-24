@@ -142,7 +142,7 @@ export function BookDetailsView() {
 		<>
 			<BookDetailsBackground imageUrl={backgroundUrl} title={titleForBackground} />
 
-			<div className="relative z-10 mx-auto max-w-[1280px] px-4 pb-14 pt-10 sm:px-8 lg:px-10">
+			<div className="relative z-10 mx-auto max-w-[1280px] px-4 pb-10 pt-3 sm:px-6 sm:pb-14 sm:pt-8 lg:px-10 lg:pt-10">
 				{!hasTmdbCredentials ? (
 					<section className="rounded-3xl border border-red-400/20 bg-red-500/10 p-4 text-sm text-red-100">
 						<code>VITE_TMDB_API_KEY</code> yoki <code>VITE_TMDB_READ_ACCESS_TOKEN</code>{" "}
@@ -159,9 +159,9 @@ export function BookDetailsView() {
 				) : null}
 
 				{hasTmdbCredentials && movie ? (
-					<section className="overflow-hidden rounded-[30px] p-5 sm:p-8">
+					<section className="overflow-hidden rounded-[30px] px-0 py-4 sm:p-8">
 						<div className="grid gap-8 lg:grid-cols-[300px_minmax(0,1fr)]">
-							<div className="h-[420px] overflow-hidden rounded-2xl shadow-[0_30px_55px_-30px_rgba(0,0,0,0.95)] sm:h-[450px]">
+							<div className="mx-auto aspect-[2/3] w-full max-w-[300px] overflow-hidden rounded-2xl shadow-[0_30px_55px_-30px_rgba(0,0,0,0.95)] sm:h-[450px] sm:aspect-auto lg:mx-0">
 								<img
 									className="h-full w-full object-cover"
 									src={movie.posterUrl}
@@ -177,7 +177,7 @@ export function BookDetailsView() {
 									</span>
 								</div>
 
-								<h1 className="my-4 text-3xl font-bold text-white sm:text-4xl">
+								<h1 className="my-4 text-2xl font-bold leading-tight text-white sm:text-4xl">
 									{movie.title} {movie.releaseYear !== "N/A" ? `(${movie.releaseYear})` : ""}
 								</h1>
 
@@ -194,7 +194,7 @@ export function BookDetailsView() {
 									</h4>
 								</div>
 
-								<p className="max-w-4xl leading-8 text-white/82">{movie.overview}</p>
+								<p className="max-w-4xl text-sm leading-7 text-white/82 sm:text-base sm:leading-8">{movie.overview}</p>
 
 								<div className="mt-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
 									<div className="inline-flex flex-wrap items-center gap-3">
@@ -249,7 +249,7 @@ export function BookDetailsView() {
 
 							<button
 								type="button"
-								className="rounded-full bg-rose-500 px-8 py-4 text-sm font-semibold uppercase tracking-[0.14em] text-white shadow-lg shadow-rose-500/40 transition hover:bg-rose-600 sm:text-base"
+								className="w-full rounded-full bg-rose-500 px-8 py-4 text-sm font-semibold uppercase tracking-[0.14em] text-white shadow-lg shadow-rose-500/40 transition hover:bg-rose-600 sm:w-auto sm:text-base"
 							>
 								Watch Now
 							</button>
